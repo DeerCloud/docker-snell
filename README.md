@@ -22,7 +22,7 @@
 |---|
 |deercloud/snell:latest|
 |deercloud/snell:current|
-|deercloud/snell:1.0.0|
+|deercloud/snell:1.0.1|
 
 
 ## environment variables

@@ -2,15 +2,15 @@ FROM alpine:edge as builder
 
 LABEL maintainer="metowolf <i@i-meto.com>"
 
-ENV SNELL_URL https://github.com/surge-networks/snell/releases/download/1.0/snell-server-v1.0.0-linux-amd64.zip
+ENV SNELL_VERSION 1.0.1
 
 RUN apk update \
   && apk add --no-cache \
     unzip \
     upx \
-  && wget -O snell-server.zip $SNELL_URL \
+  && wget -O snell-server.zip https://github.com/surge-networks/snell/releases/download/${SNELL_VERSION}/snell-server-v${SNELL_VERSION}-linux-amd64.zip \
   && unzip snell-server.zip \
-  && upx snell-server \
+  && upx --brute snell-server \
   && mv snell-server /usr/local/bin/
 
 
