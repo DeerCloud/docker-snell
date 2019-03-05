@@ -2,7 +2,7 @@ FROM alpine:edge as builder
 
 LABEL maintainer="metowolf <i@i-meto.com>"
 
-ENV SNELL_VERSION 1.0.1
+ENV SNELL_VERSION 1.1.0
 
 RUN apk update \
   && apk add --no-cache \
